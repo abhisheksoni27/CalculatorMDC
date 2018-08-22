@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#333e4b</color>
+    <color name="colorPrimaryDark">#0c1823</color>
+    <color name="colorAccent">#0aceff</color>
+    <color name="operatorButtonColor">#333e4b</color>
+    <color name="textColorPrimary">#e5f2f9</color>
+    <color name="operandButtonColor">#0c1823</color>
+</resources>

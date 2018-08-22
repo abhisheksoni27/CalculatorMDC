@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="OperatorButtonTheme" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:backgroundTint">@color/operatorButtonColor</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">82sp</item>
+        <item name="android:layout_height">80sp</item>
+    </style>
+
+    <style name="OperandButtonTheme" parent="OperatorButtonTheme">
+        <item name="android:layout_width">90sp</item>
+        <item name="android:layout_height">100sp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:backgroundTint">@color/operandButtonColor</item>
+    </style>
+</resources>

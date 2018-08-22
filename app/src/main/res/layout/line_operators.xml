@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/del_button"
+        style="@style/OperatorButtonTheme"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="DEL"
+        app:cornerRadius="0dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton5"
+        style="@style/OperatorButtonTheme"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="*"
+        app:cornerRadius="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/divide_button"
+        style="@style/OperatorButtonTheme"
+
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="/"
+        app:cornerRadius="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minus_button"
+        style="@style/OperatorButtonTheme"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="-"
+        app:cornerRadius="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_button"
+        style="@style/OperatorButtonTheme"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="+"
+        app:cornerRadius="0dp" />
+</LinearLayout>
