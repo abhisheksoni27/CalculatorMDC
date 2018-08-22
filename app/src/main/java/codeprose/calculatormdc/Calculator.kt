@@ -32,7 +32,7 @@ class Calculator {
                     while (i < tokens.size && tokens[i] in '0'..'9')
                         sBuf.append(tokens[i++])
 
-                    if(i != tokens.size){
+                    if (i != tokens.size) {
 
                         // There may be a decimal
                         if (tokens[i] == '.') {
@@ -54,21 +54,17 @@ class Calculator {
                     ops.pop()
                 } else if (tokens[i] == '+' || tokens[i] == '-' ||
                         tokens[i] == '*' || tokens[i] == '/') {
-                    // While top of 'ops' has same or greater precedence to current
-                    // token, which is an operator. Apply operator on top of 'ops'
-                    // to top two elements in values stack
+
                     while (!ops.empty() && hasPrecedence(tokens[i], ops.peek()))
                         values.push(applyOp(ops.pop(), values.pop(), values.pop()))
 
                     // Push current token to 'ops'.
                     ops.push(tokens[i])
-                }// Current token is an operator.
-                // Closing brace encountered, solve entire brace
-                // Current token is an opening brace, push it to 'ops'
+                }
+
                 i++
             }
-            // Entire expression has been parsed at this point, apply remaining
-            // ops to remaining values
+
             while (!ops.empty())
                 values.push(applyOp(ops.pop(), values.pop(), values.pop()))
 
@@ -76,12 +72,7 @@ class Calculator {
             return values.pop()
         }
 
-        // Returns true if 'op2' has higher or same precedence as 'op1',
-        // otherwise returns false.
         private fun hasPrecedence(op1: Char, op2: Char): Boolean {
-            if (op2 == '(' || op2 == ')') {
-                return false
-            }
             return !((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-'))
         }
 
