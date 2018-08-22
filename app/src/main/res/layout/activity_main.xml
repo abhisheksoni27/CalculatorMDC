@@ -15,7 +15,7 @@
         android:textAlignment="viewEnd"
         android:focusable="false"
         android:inputType="none"
-        android:textSize="75sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
