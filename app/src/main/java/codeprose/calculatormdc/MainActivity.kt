@@ -14,12 +14,32 @@ import kotlinx.android.synthetic.main.line_operators.*
 
 class MainActivity : AppCompatActivity() {
 
+    private val TAG = "MainActivity"
+
+    private fun isOperator(string: String): Boolean {
+        if ("+,-,/,*".contains(string)) {
+            return true
+        }
+        return false
+    }
+
     private var buttonListener: View.OnClickListener = View.OnClickListener { view ->
 
-        var temp = input?.text
+        val temp = input?.text
 
         if (view is MaterialButton) {
-            input?.setText(temp.toString() + " " + view.text.toString())
+            var finalResult = temp.toString()
+
+            if (isOperator(view.text.toString())) {
+                finalResult += " "
+            }
+
+            finalResult += view.text.toString()
+
+            if (isOperator(view.text.toString())) {
+                finalResult += " "
+            }
+            input?.setText(finalResult)
         }
     }
 
@@ -27,6 +47,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setClickListener()
+
+        equal_to_button.setOnClickListener {
+            val answer: Double = Calculator.solve(input.text.toString())
+            input.setText(answer.toString())
+        }
+
+        del_button.setOnClickListener {
+            input.setText(input?.text?.slice(IntRange(0, -1)))
+        }
     }
 
     private fun setClickListener() {
