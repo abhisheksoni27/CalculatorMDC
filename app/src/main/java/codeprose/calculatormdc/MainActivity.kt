@@ -49,8 +49,11 @@ class MainActivity : AppCompatActivity() {
         setClickListener()
 
         equal_to_button.setOnClickListener {
-            val answer: Double = Calculator.solve(input.text.toString())
-            input.setText(answer.toString())
+            val inputExpression = input.text.toString()
+            if (inputExpression.isNotEmpty()) {
+                val answer: Double = Calculator.solve(inputExpression)
+                input.setText(answer.toString())
+            }
         }
 
         del_button.setOnClickListener {
