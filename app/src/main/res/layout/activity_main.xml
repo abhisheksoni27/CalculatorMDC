@@ -12,9 +12,10 @@
         android:id="@+id/input"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textAlignment="viewEnd"
+        android:background="@android:color/transparent"
         android:focusable="false"
         android:inputType="none"
+        android:textAlignment="viewEnd"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2">
+        app:layout_constraintTop_toBottomOf="@+id/input">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -57,9 +58,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include
-                layout="@layout/line_operators"
-                android:layout_width="116dp" />
+            <include layout="@layout/line_operators" />
         </LinearLayout>
 
     </LinearLayout>
