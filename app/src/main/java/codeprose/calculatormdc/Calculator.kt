@@ -1,7 +1,7 @@
 package codeprose.calculatormdc
 
 /**
- * Taken from GeeksForGeeks: https://www.geeksforgeeks.org/expression-evaluation/
+ * Adapted with changes from GeeksForGeeks: https://www.geeksforgeeks.org/expression-evaluation/
  */
 
 import java.util.*
@@ -29,8 +29,22 @@ class Calculator {
                 if (tokens[i] in '0'..'9') {
                     val sBuf = StringBuffer()
                     // There may be more than one digits in number
-                    while (i < tokens.size && tokens[i] >= '0' && tokens[i] <= '9')
+                    while (i < tokens.size && tokens[i] in '0'..'9')
                         sBuf.append(tokens[i++])
+
+                    if(i != tokens.size){
+
+                        // There may be a decimal
+                        if (tokens[i] == '.') {
+                            sBuf.append(".")
+                            i++
+                        }
+
+                        while (i < tokens.size && tokens[i] in '0'..'9')
+                            sBuf.append(tokens[i++])
+
+                    }
+
                     values.push(sBuf.toString().toDouble())
                 } else if (tokens[i] == '(')
                     ops.push(tokens[i])

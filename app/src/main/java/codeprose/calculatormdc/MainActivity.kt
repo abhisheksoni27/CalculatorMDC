@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setClickListener() {
-        val buttonsArray = listOf(divide_button, multiply_button, minus_button, plus_button, one_button, two_button, three_button, four_button, five_button, six_button, seven_button, eight_button, nine_button, zero_button)
+        val buttonsArray = listOf(divide_button, multiply_button, minus_button, plus_button, one_button, two_button, three_button, four_button, five_button, six_button, seven_button, eight_button, nine_button, zero_button, dot_button)
 
         for (button in buttonsArray) {
             button.setOnClickListener(buttonListener)
